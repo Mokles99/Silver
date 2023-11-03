@@ -11,40 +11,64 @@ export const navLinks = [
   },
   {
     id: "product",
-    title: "Product",
+    title: "Solutions",
   },
   {
     id: "clients",
-    title: "Agents",
+    title: "Team",
   },
   {
     id: "contact",
     title: "Contact",
   },
+  {
+    id: "    ",
+    title: "     ",
+  },
 
 ];
 
+// export const features = [
+//   {
+//     id: "feature-1",
+//     icon: star,
+//     titleKey: "Innovations",
+//     contentKey:
+//       "The best software solutions come with an exciting mix of features and cutting-edge technologies",
+//   },
+//   {
+//     id: "feature-2",
+//     icon: shield,
+//     titleKey: "100% Secured",
+//     contentKey:
+//       "We implement rigorous measures to ensure your data and projects are protected.",
+//   },
+//   {
+//     id: "feature-3",
+//     icon: send,
+//     titleKey: "Seamless Integration",
+//     contentKey:
+//       "Our software integrates seamlessly, ensuring you save time and boost efficiency.",
+//   },
+// ];
 export const features = [
   {
     id: "feature-1",
     icon: star,
-    title: "Innovations",
-    content:
-      "The best software solutions come with an exciting mix of features and cutting-edge technologies",
+    titleKey: "feature1Title",
+    contentKey: "feature1Content",
   },
   {
     id: "feature-2",
     icon: shield,
-    title: "100% Secured",
-    content:
-      "We implement rigorous measures to ensure your data and projects are protected.",
+    titleKey: "feature2Title",
+    contentKey: "feature2Content",
   },
   {
     id: "feature-3",
     icon: send,
-    title: "Seamless Integration",
-    content:
-      "Our software integrates seamlessly, ensuring you save time and boost efficiency.",
+    titleKey: "feature3Title",
+    contentKey: "feature3Content",
   },
 ];
 
@@ -78,24 +102,24 @@ export const feedback = [
 export const stats = [
   {
     id: "stats-1",
-    title: "Employees",
+    title: "Employees", 
     value: "8+",
   },
   {
     id: "stats-2",
-    title: "Trusted by Company",
+    title: "TrustedByCompany", 
     value: "10+",
   },
   {
     id: "stats-3",
-    title: "Future Projects",
+    title: "FutureProjects", 
     value: "30+",
   },
 ];
 
 export const footerLinks = [
   {
-    title: "Useful Links",
+    title: "Services",
     links: [
       {
         name: "Content",
@@ -191,9 +215,9 @@ export const clients = [
     id: "client-2",
     logo: LOGO1,
   },
-  {
-    id: "client-3",
-    logo: LOGO2,
-  },
+  // {
+  //   id: "client-3",
+  //   logo: LOGO2,
+  // },
  
 ];

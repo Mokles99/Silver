@@ -138,3 +138,13 @@
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
 }
+
+.navbar.border-b {
+  border-bottom: 1px solid #4e4b4b; 
+  transform: translateY(-18px);
+}
+.navbar-scrolled {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}

@@ -32,6 +32,12 @@ import sls from './sls.png'
 import LOGO from './logo111.png'
 import LOGO1 from './logo222.png'
 import LOGO2 from './logo333.png'
+import code from './code.png'
+import image1 from './image2.png'
+import bureau from './bureau.jpg'
+import card1 from './card1.png'
+import france from './france.png'
+import anglais from './anglais.png'
 export {
   airbnb,
   bill,
@@ -39,13 +45,19 @@ export {
   card,
   coinbase,
   dropbox,
+  france,
+  anglais,
   LOGO,
   LOGO1,
   LOGO2,
   sls,
   sls1,
   logo,
+  code,
+  card1,
+  image1,
   logosls,
+  bureau,
   logoslss,
   robot2,
   quotes,

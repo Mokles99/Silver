@@ -1,8 +1,11 @@
 import { features } from "../constants";
 import styles, { layout } from "../style";
 import Button from "./Button";
+import { useTranslation } from "react-i18next";
 
-const FeatureCard = ({ icon, title, content, index }) => (
+const FeatureCard = ({ icon, titleKey, contentKey, index }) => {
+  const { t } = useTranslation();
+  return (
   <div
     className={`flex flex-row p-6 rounded-[20px] ${
       index !== features.length - 1 ? "mb-6" : "mb-0"
@@ -14,39 +17,41 @@ const FeatureCard = ({ icon, title, content, index }) => (
       <img src={icon} alt="star" className="w-[50%] h-[50%] object-contain" />
     </div>
     <div className="flex-1 flex flex-col ml-3">
-      <h4 className="font-poppins font-semibold text-white text-[18px] leading-[23.4px] mb-1">
-        {title}
+    <h4 className="font-poppins font-semibold text-white text-[18px] leading-[23.4px] mb-1">
+        {t(titleKey)}
       </h4>
       <p className="font-poppins font-normal text-dimWhite text-[16px] leading-[24px]">
-        {content}
+        {t(contentKey)}
       </p>
     </div>
   </div>
-);
+  )
+}
 
-const Business = () => (
-  <section id="features" className={layout.section}>
-    <div className={layout.sectionInfo}>
-      <h2 className={styles.heading2}>
-        You do the business, <br className="sm:block hidden" /> we’ll handle the
-        solution.
-      </h2>
-      <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        With the right software solution, you can enhance your business
-        operations, streamline processes, and increase profitability. But with
-        countless technologies and platforms out there, let our team guide you
-        to the optimal choice tailored for your unique needs.
-      </p>
+const Business = () => {
+  const { t } = useTranslation();
 
-      <Button styles={`mt-10`} />
-    </div>
+  return (
+    <section id="features" className={layout.section}>
+      <div className={layout.sectionInfo}>
+        <h2 className={styles.heading2}>
+          {t("YouDoTheBusiness")} <br className="sm:block hidden" /> {t("WeHandleTheSolution")}
+        </h2>
+        <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
+          {t("WithTheRightSoftwareSolution")}
+        </p>
 
-    <div className={`${layout.sectionImg} flex-col`}>
-      {features.map((feature, index) => (
-        <FeatureCard key={feature.id} {...feature} index={index} />
-      ))}
-    </div>
-  </section>
-);
+        <Button styles={`mt-10`} />
+      </div>
+
+      <div className={`${layout.sectionImg} flex-col`}>
+        {features.map((feature, index) => (
+          <FeatureCard key={feature.id} {...feature} index={index} />
+        ))}
+      </div>
+    </section>
+  );
+};
+
 
 export default Business;
